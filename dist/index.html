@@ -5,23 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <link rel="stylesheet" href="css/styles.min.css">
+  
   <title>Fernanda Benites</title>
 </head>
 <body>
   <header>
     <nav class="navbar fixed-top">
-      <a class="navbar-brand mx-auto ml-sm-0 active"href="#">Fernanda<strong>Benites</strong></a>
+      <a class="navbar-brand mx-auto ml-sm-0"href="#">Fernanda<strong>Benites</strong></a>
       <div class="navbar-expand mx-auto mr-sm-0">
         <ul class="navbar-nav navbar-expand">
           <li class="nav-item">
             <a class="nav-link" href="#about">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#experience">Experience</a>
+            <a class="nav-link" href="#portfolio">Portfolio</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#skillset">Skillset</a>
@@ -33,6 +32,7 @@
       </div>
     </nav>
   </header>
+
   <main>
     <section id="home" class="section home">
       <div class="home-container">
@@ -46,20 +46,37 @@
         </div>
       </div>
     </section>
-    <section id="about" class="section about">
-      <h2><i class="fas fa-user"></i>About</h2>
-      <div class="content">
-        <p>As a <span>Front-End Developer</span> with over <span >6 years experience</span>, I <span>develop</span> beautiful and useful <span >web applications</span>.</p><p>I <span>love</span> to work with <span>challenging</span> and <span>creative projects</span> and I'm <span>constantly</span> interested in <span>learning</span> and <span>following</span> the <span>new trends</span>.</p>
-      </div>
+
+    <section class="section about">
+      <div id="about" class="anchor"></div>
+      <!-- <div class="container"> -->
+        <h2><i class="fas fa-user"></i>About</h2>
+        <div id="about-content" class="content"></div>
+      <!-- </div> -->
     </section>
-    <section id="experience" class="section experience">
-      <h2><i class="fas fa-briefcase"></i>Experience</h2>
+
+    <section class="section portfolio">
+    <div id="portfolio" class="anchor"></div>
+      <!-- <div class="container"> -->
+        <h2><i class="fas fa-briefcase"></i>Portfolio</h2>
+
+      <!-- </div> -->
     </section>
-    <section id="skillset" class="section skillset">
-      <h2><i class="fas fa-code"></i>Skillset</h2>
+
+    <section class="section skillset">
+      <div id="skillset" class="anchor"></div>
+      <!-- <div class="container"> -->
+        <h2><i class="fas fa-code"></i>Skillset</h2>
+
+        <ul class="skillsbar"></ul>
+      <!-- </div> -->
     </section>
-    <section id="contact" class="section contact">
-      <h2><i class="fas fa-envelope"></i>Contact</h2>
+
+    <section class="section contact">
+      <div id="contact" class="anchor"></div>
+      <!-- <div class="container"> -->
+        <h2><i class="fas fa-envelope"></i>Contact</h2>
+      <!-- </div> -->
     </section>
   </main>
 
@@ -78,6 +95,7 @@
     </nav>
   </footer>
   
+  <script src="js/vendors.min.js"></script>
   <script src="js/main.min.js"></script>
 </body>
 </html>

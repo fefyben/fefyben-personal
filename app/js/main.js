@@ -32,7 +32,6 @@
 
 // Load animation when skills is in Viewport
 const isInViewport = elem => {
-  // Improve this logic (I need to think about other option for this)
   const distance = elem.getBoundingClientRect();
 	return (
 		distance.top >= 0 &&
@@ -51,7 +50,7 @@ window.addEventListener('scroll', function(e) {
 
     let skillItem = skill.children[1].children[0];
 
-	  if (isInViewport(document.querySelector('.skillset'))) {
+	  if (isInViewport(document.querySelector('.skillset li:first-child')) || isInViewport(document.querySelector('.skillset li:last-child'))) {
       skillItem = skillItem.className = `skillsbar-bar skillsbar-${ skillPercent }`;
     } else {
       skillItem = skillItem.classList.remove(`skillsbar-${ skillPercent }`);
