@@ -305,10 +305,6 @@ section {
     &-text {
       color: #7b8993;
     }
-
-    // &-col-content h5 {
-    //   @include text-style();
-    // }
   }
 
   small {
@@ -336,10 +332,11 @@ section {
   list-style:none;
   padding: 0;
   width: 100%;
-  // min-width: 30rem;
 
-  // width: 50%;
-  // min-width: 30rem;
+  @include media-breakpoint-up(lg) {
+    min-width: 35rem;
+    width: 50%;
+  }
   
   li {
     position: relative;

@@ -1,40 +1,38 @@
 'use strict';
 
-const langs = { 
-  "HTML": "100",
-  "CSS": "92",
-  "Javascript": "71",
-  "PHP": "53",
-  "Angular": "65"
-};
-const entries = Object.entries(langs);
-
 (function getSkills() {
   let item = '';
 
-  for (const [lang, percent] of entries) {
-    let num = parseInt(percent);
-    num = Math.round(num / 10);
+  fetch('content/skills.json')
+    .then(res => res.json())
+    .then(data => {
+      const entries = Object.entries(data);
 
-    item += `
-      <li>
-        <div class="skillsbar-header">
-          <h3>${ lang }</h3>
-          <span class="percent">${ num }0%</span>
-        </div>
-        <div class="skillsbar-container">
-          <span class="skillsbar-bar skillsbar-${ num }0"></span>
-        </div>
-      </li>
-    `;
-    
-    document.querySelector('.skillsbar').innerHTML = item;
-  }
+      for (const [lang, percent] of entries) {
+        let num = parseInt(percent);
+        num = Math.round(num / 10);
+
+        item += `
+          <li>
+            <div class="skillsbar-header">
+              <h3>${ lang }</h3>
+              <span class="percent">${ num }0%</span>
+            </div>
+            <div class="skillsbar-container">
+              <span class="skillsbar-bar skillsbar-${ num }0"></span>
+            </div>
+          </li>
+        `;
+        
+        document.querySelector('.skillsbar').innerHTML = item;
+      }
+    })
+    .catch(err => console.log(err));
 })();
 
-const skillSet = document.querySelector('.skillset');
-
+// Load animation when skills is in Viewport
 const isInViewport = elem => {
+  // Improve this logic (I need to think about other option for this)
   const distance = elem.getBoundingClientRect();
 	return (
 		distance.top >= 0 &&
@@ -53,10 +51,21 @@ window.addEventListener('scroll', function(e) {
 
     let skillItem = skill.children[1].children[0];
 
-	  if (isInViewport(skillSet)) {
+	  if (isInViewport(document.querySelector('.skillset'))) {
       skillItem = skillItem.className = `skillsbar-bar skillsbar-${ skillPercent }`;
     } else {
       skillItem = skillItem.classList.remove(`skillsbar-${ skillPercent }`);
     }
   });
 }, false);
+
+// document.addEventListener("DOMContentLoaded", getAbout());
+// Get About content
+window.onload = function getAbout() {
+  fetch('content/about.txt')
+    .then(res => res.text())
+    .then(data => {
+      document.querySelector('#about-content').innerHTML = data;
+    })
+    .catch(err => console.log(err));
+};

@@ -247,6 +247,10 @@ section {
   list-style: none;
   padding: 0;
   width: 100%; }
+  @media (min-width: 992px) {
+    .skillsbar {
+      min-width: 35rem;
+      width: 50%; } }
   .skillsbar li {
     position: relative;
     width: 100%;
