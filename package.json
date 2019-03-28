@@ -1,0 +1,39 @@
+{
+  "name": "fefyben-personal",
+  "version": "1.0.0",
+  "description": "My personal page.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fefyben/fefyben-personal.git"
+  },
+  "author": "Fernanda Benites",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fefyben/fefyben-personal/issues"
+  },
+  "homepage": "https://github.com/fefyben/fefyben-personal#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.5.0",
+    "cssnano": "^4.1.10",
+    "del": "^4.0.0",
+    "gulp": "^4.0.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.2",
+    "gulp-useref": "^3.1.6",
+    "node-sass": "^4.11.0",
+    "run-sequence": "^2.2.1"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.7"
+  }
+}

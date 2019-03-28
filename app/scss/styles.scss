@@ -1,0 +1,413 @@
+@import '../../node_modules/bootstrap/scss/_functions.scss';
+@import '../../node_modules/bootstrap/scss/_variables.scss';
+@import '../../node_modules/bootstrap/scss/mixins/_breakpoints.scss';
+
+/* Resources
+------------------------------------------------------------------------------*/
+@keyframes bg {
+  from { filter: hue-rotate(0deg); }
+  to { filter: hue-rotate(-360deg); }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes zoomInUp {
+  from {
+    opacity: 0;
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+
+  60% {
+    opacity: 1;
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  }
+}
+
+@mixin text-style {
+  color: #f35626;
+  background-image: linear-gradient(90deg, #f35626, #feab3a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -moz-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: bg 20s infinite linear;
+}
+
+@mixin bg-style {
+  color: #f35626;
+  background-image: linear-gradient(90deg, #f35626, #feab3a);
+  animation: bg 20s infinite linear;
+}
+
+@mixin hr {
+  content: '';
+  height: 1px;
+  background-color: #c0c8c9;
+  background: linear-gradient(to right, transparent, #c0c8c9, transparent);
+  position: absolute;
+  width: 100%;
+}
+
+/* Custom Styles
+------------------------------------------------------------------------------*/
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #7b8993;
+}
+
+a {
+  color: #3C464D;
+}
+
+main {
+  margin: 7rem 0 3.5rem;
+
+  @include media-breakpoint-up(sm) {
+    margin-top: 4.5rem;
+  }
+}
+
+header, footer {
+  nav {
+    background-color: #fff;
+  }
+}
+
+header .navbar::after {
+  @include hr;
+  bottom: 0;
+}
+
+footer .navbar::before {
+  @include hr;
+  top: 0;
+}
+
+.navbar {
+  &-brand {
+    font-size: 2rem;
+    letter-spacing: .05rem;
+    text-transform: lowercase;
+
+    @include text-style;
+  }
+
+  .fa-heart {
+    @include text-style;
+  }
+}
+
+section {
+  padding: 3.5rem 2rem;
+  position: relative;
+  
+  @include media-breakpoint-up(md) {
+    padding: 4rem 12.5%;
+  }
+
+  &:nth-child(odd) {
+    &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      @include bg-style;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: -1;
+    }
+
+    h2 {
+      color: white;
+    }
+  }
+  
+  h2 {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 2rem;
+
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 5rem;
+    }
+
+    i {
+      margin-right: 1rem;
+    }
+  }
+}
+
+.home {
+  text-align: center;
+  min-height: 90vh;
+  height: 25rem;
+
+  * {
+    color: white;
+  }
+
+  &-container {
+    @include media-breakpoint-up(sm) {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      width: 75%;
+    }
+
+    @include media-breakpoint-up(sm) {
+      width: 90%;
+    }
+  }
+
+  h1 {
+    font-size: 4rem;
+    font-weight: 200;
+    letter-spacing: -.15rem;
+    margin-bottom: 2rem;
+    animation: fadeInDown 2s both;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 6rem;
+    }
+  }
+  
+  h4 {
+    font-size: 1.5rem;
+    font-weight: 100;
+    animation: zoomInUp 3s both;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 2.25rem;
+    }
+  }
+  
+  h3 {
+    font-family: 'Old Standard TT', serif;
+    font-size: 1.5rem;
+    font-style: italic;
+    line-height: 2rem;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 2.25rem;
+      line-height: 3rem;
+    }
+  
+    small {
+      font-family: 'Raleway', sans-serif;
+      font-size: .75rem;
+      font-style: normal;
+      display: block;
+      text-align: center;
+
+      @include media-breakpoint-up(lg) {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  &-quote {
+    margin: 0 auto;
+    padding: 2.5rem 2rem 0;
+    position: relative;
+    display: inline-block;
+
+    &::before,
+    &::after {
+      display: inline-block;
+      font-family: 'Old Standard TT', serif;
+      font-size: 5rem;
+      opacity: .25;
+      position: absolute;
+      top: 15%;
+    }
+
+    &::before {
+      content: '“';
+      left: -.5rem;
+    }
+
+    &::after {
+      content: '”';
+      right: -.5rem;
+    }
+  }
+}
+
+.about {
+  p {
+    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 2rem;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 2rem;
+      line-height: 3rem;
+    }
+  }
+
+  span {
+    @include text-style;
+    font-weight: 500;
+  }
+}
+
+.experience {
+  .card {
+    background-image: none;
+    border-radius: inherit;
+    border: none;
+    margin: 0 auto 5rem;
+
+    @include media-breakpoint-up(lg) {
+      max-width: 90%;
+    }
+
+    &-col-header {
+      background-color: rgba(0,0,0,.03);
+
+      @include media-breakpoint-up(sm) {
+        border-right: 1px solid rgba(0, 0, 0, .125);
+      }
+    }
+
+    &-img {
+      border-radius: inherit;
+      color: white;
+    }
+
+    &-header {
+      background-color: transparent;
+      border-top: 1px solid rgba(0, 0, 0, .125);
+      color: #7b8993;
+
+      @include media-breakpoint-up(sm) {
+        border-bottom: none;
+      }
+    }
+
+    &-text {
+      color: #7b8993;
+    }
+
+    // &-col-content h5 {
+    //   @include text-style();
+    // }
+  }
+
+  small {
+    display: block;
+  }
+}
+
+.contact {
+  min-height: 90vh;
+}
+
+.anchor {
+  content: '';
+  position: absolute;
+  top: -100px;
+
+  @include media-breakpoint-up(sm) {
+    top: -60px;
+  }
+}
+
+// ==============================================
+.skillsbar {
+  margin: 0 auto;
+  list-style:none;
+  padding: 0;
+  width: 100%;
+  // min-width: 30rem;
+
+  // width: 50%;
+  // min-width: 30rem;
+  
+  li {
+    position: relative;
+    width: 100%;
+    padding: .5rem;
+    margin-bottom: 10px;
+  }
+
+  &-header{
+    color: #7b8993;
+    
+    h3 {
+      display: inline-block;
+    }
+
+    .percent{
+      position: absolute;
+      right: .5rem;
+    }
+  }
+  
+  &-container {
+    background: #7b8993;
+    position: relative;
+    width: 100%;
+    height: 1rem;
+    margin-top: 5px;
+    display: block;
+  }
+    
+  &-bar{
+    position:absolute;
+    width:0;
+    height: 100%;
+    animation: 2s ease-out both;
+
+    &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      @include bg-style;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 1;
+    }
+  }
+
+  &-10 { animation-name: progress-10; }
+  &-20 { animation-name: progress-20; }
+  &-30 { animation-name: progress-30; }
+  &-40 { animation-name: progress-40; }
+  &-50 { animation-name: progress-50; }
+  &-60 { animation-name: progress-60; }
+  &-70 { animation-name: progress-70; }
+  &-80 { animation-name: progress-80; }
+  &-90 { animation-name: progress-90; }
+  &-100 { animation-name: progress-100; }
+}
+
+@keyframes progress-10 { from { width: 0; } to { width: 10%; } }
+@keyframes progress-20 { from { width: 0; } to { width: 20%; } }
+@keyframes progress-30 { from { width: 0; } to { width: 30%; } }
+@keyframes progress-40 { from { width: 0; } to { width: 40%; } }
+@keyframes progress-50 { from { width: 0; } to { width: 50%; } }
+@keyframes progress-60 { from { width: 0; } to { width: 60%; } }
+@keyframes progress-70 { from { width: 0; } to { width: 70%; } }
+@keyframes progress-80 { from { width: 0; } to { width: 80%; } }
+@keyframes progress-90 { from { width: 0; } to { width: 90%; } }
+@keyframes progress-100 { from { width: 0; } to { width: 100%; } }
