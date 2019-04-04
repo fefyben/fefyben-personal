@@ -1,0 +1,36 @@
+.navbar {
+  background-color: $default-bg;
+
+  header &::after {
+    @include hr;
+    bottom: 0;
+  }
+
+  footer &::before {
+    @include hr;
+    top: 0;
+  }
+  
+  &-brand {
+    @include text-style;
+    font-size: 2rem;
+    letter-spacing: .05rem;
+    text-transform: lowercase;
+    
+  }
+
+  .fa-heart {
+    @include text-style;
+  }
+}
+
+// Anchor positioning
+.anchor {
+  content: '';
+  position: absolute;
+  top: -100px;
+
+  @include media-breakpoint-up(sm) {
+    top: -60px;
+  }
+}

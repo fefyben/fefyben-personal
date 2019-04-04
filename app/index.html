@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/styles.css">
   <!--endbuild-->
-  
+
   <title>Fernanda Benites</title>
 </head>
 <body>
@@ -40,7 +40,7 @@
     <section id="home" class="section home">
       <div class="home-container">
         <h1>FRONT-END DEVELOPER</h1>
-        <h4>I want to make things that make a difference</h4>
+        <h4>HTML, CSS and Javascript</h4>
         <div class="home-quote">
           <h3>
             Whatever is worth doing at all, is worth doing well.
@@ -52,34 +52,62 @@
 
     <section class="section about">
       <div id="about" class="anchor"></div>
-      <!-- <div class="container"> -->
-        <h2><i class="fas fa-user"></i>About</h2>
-        <div id="about-content" class="content"></div>
-      <!-- </div> -->
+      <h2><i class="fas fa-user"></i>About</h2>
+      <div id="about-content" class="content"></div>
     </section>
 
     <section class="section portfolio">
-    <div id="portfolio" class="anchor"></div>
-      <!-- <div class="container"> -->
-        <h2><i class="fas fa-briefcase"></i>Portfolio</h2>
-
-      <!-- </div> -->
+      <div id="portfolio" class="anchor"></div>
+      <h2><i class="fas fa-briefcase"></i>Portfolio</h2>
+      <div id="portfolio-content" class="content">
+        <p>coming soon...</p>
+      </div>
     </section>
 
     <section class="section skillset">
       <div id="skillset" class="anchor"></div>
-      <!-- <div class="container"> -->
-        <h2><i class="fas fa-code"></i>Skillset</h2>
-
-        <ul class="skillsbar"></ul>
-      <!-- </div> -->
+      <h2><i class="fas fa-code"></i>Skillset</h2>
+      <div id="skillsbar-content" class="content"></div>
     </section>
 
     <section class="section contact">
       <div id="contact" class="anchor"></div>
-      <!-- <div class="container"> -->
-        <h2><i class="fas fa-envelope"></i>Contact</h2>
-      <!-- </div> -->
+      <h2><i class="fas fa-envelope"></i>Contact</h2>
+      <div id="contact-content" class="content">
+          <div class="row">
+            <div class="col-lg">
+              <h3>Want to have a chat?<br>Send me an email and we can talk!</h3>
+              <p>Please, feel free to email me if you have specific requirements, or even if you just want a chat!
+              </p>
+            </div>
+            <div class="col-lg">
+              <form class="needs-validation" novalidate action="https://formspree.io/fefyben@gmail.com" method="POST">
+                <div class="hpot">
+                  <input name="_gotcha">
+                </div>
+                <div class="form-group">
+                  <label for="name">Name *</label>
+                  <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+                  <div class="invalid-feedback">This field is required.</div>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email *</label>
+                  <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email" placeholder="Enter your email" required>
+                  <div class="invalid-feedback">This field is required. Please provide a valid email.</div>
+                  <small id="emailHelp" class="form-text">I'll never share your email with anyone else.</small>
+                </div>
+
+                <div class="form-group">
+                  <label for="message">Message *</label>
+                  <textarea class="form-control" id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
+                  <div class="invalid-feedback">This field is required.</div>
+                </div>
+
+                <button type="submit" class="btn">Send</button>
+              </form>
+            </div>
+          </div>
+      </div>
     </section>
   </main>
 
@@ -89,10 +117,10 @@
       <div class="navbar-expand mx-auto ml-sm-0 navbar-nav">
         <div class="navbar-nav social">
           <a class="nav-item nav-link" href="mailto:fefyben@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a>
-          <a class="nav-item nav-link" href="https://www.linkedin.com/in/fefyben/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a class="nav-item nav-link" href="https://www.linkedin.com/in/fefyben" target="_blank"><i class="fab fa-linkedin-in"></i></a>
           <a class="nav-item nav-link" href="https://github.com/fefyben" target="_blank"><i class="fab fa-github"></i></a>
           <a class="nav-item nav-link" href="https://twitter.com/fefydev" target="_blank"><i class="fab fa-twitter"></i></a>
-          <a class="nav-item nav-link" href="https://www.instagram.com/fefy/" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a class="nav-item nav-link" href="https://www.instagram.com/fefy" target="_blank"><i class="fab fa-instagram"></i></a>
         </div>
       </div>
     </nav>

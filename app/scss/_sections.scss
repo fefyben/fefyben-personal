@@ -1,0 +1,44 @@
+section {
+  padding: 3.5rem 2rem;
+  position: relative;
+  
+  @include media-breakpoint-up(md) {
+    padding: 4rem 12.5%;
+  }
+
+  &:nth-child(odd) {
+    &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      @include bg-style;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: -1;
+    }
+    
+    * {
+      color: $secondary-text;
+    }
+
+    h2 {
+      color: $secondary-text;
+    }
+  }
+  
+  h2 {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 2rem;
+
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 5rem;
+    }
+
+    i {
+      margin-right: 1rem;
+    }
+  }
+}

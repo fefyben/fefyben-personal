@@ -1,0 +1,27 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: $primary-text;
+}
+
+a {
+  color: $link;
+
+  &:hover {
+    color: inherit;
+  }
+}
+
+main {
+  margin: 7rem 0 3.5rem;
+
+  @include media-breakpoint-up(sm) {
+    margin-top: 4.5rem;
+  }
+}
+
+ul {
+  list-style: none;
+}

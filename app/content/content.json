@@ -1,0 +1,35 @@
+{
+  "about": {
+    "content": "Lorem ipsum dolor amet mixtape venmo mustache cliche beard DIY truffaut farm-to-table chambray celiac raclette tacos. Vaporware farm-to-table gluten-free irony, keffiyeh pok pok bitters poutine. Trust fund craft beer sartorial, disrupt gastropub brooklyn hashtag tattooed chambray raw denim irony food truck mlkshk poutine. Jean shorts ramps slow-carb, meh craft beer cray bitters echo park tumeric art party. Butcher snackwave 3 wolf moon air plant crucifix shabby chic yr glossier waistcoat. Pug forage art party, occupy listicle fashion axe prism knausgaard truffaut sriracha.\nAesthetic single-origin coffee hammock bespoke vexillologist, chartreuse salvia prism fixie letterpress lo-fi gochujang. Poke kickstarter yr hammock mumblecore typewriter artisan ennui shabby chic brooklyn godard cardigan flannel fashion axe pickled. Cray listicle letterpress enamel pin leggings. Shabby chic slow-carb glossier organic +1, bicycle rights brunch hashtag pitchfork affogato meditation. Stumptown green juice salvia, tote bag tofu knausgaard migas.\nLorem ipsum dolor amet mixtape venmo mustache cliche beard DIY truffaut farm-to-table chambray celiac raclette tacos. Vaporware farm-to-table gluten-free irony, keffiyeh pok pok bitters poutine. Trust fund craft beer sartorial, disrupt gastropub brooklyn hashtag tattooed chambray raw denim irony food truck mlkshk poutine. Jean shorts ramps slow-carb, meh craft beer cray bitters echo park tumeric art party. Butcher snackwave 3 wolf moon air plant crucifix shabby chic yr glossier waistcoat. Pug forage art party, occupy listicle fashion axe prism knausgaard truffaut sriracha.\nAesthetic single-origin coffee hammock bespoke vexillologist, chartreuse salvia prism fixie letterpress lo-fi gochujang. Poke kickstarter yr hammock mumblecore typewriter artisan ennui shabby chic brooklyn godard cardigan flannel fashion axe pickled. Cray listicle letterpress enamel pin leggings. Shabby chic slow-carb glossier organic +1, bicycle rights brunch hashtag pitchfork affogato meditation. Stumptown green juice salvia, tote bag tofu knausgaard migas."
+  },
+  "portfolio": {
+    "projects": [
+      {
+        "title": "Fefy Cooking",
+        "description": "",
+        "skills-list": [],
+        "image": "",
+        "url": ""
+      },
+      {
+        "title": "Fefy Cooking",
+        "description": "",
+        "skills-list": [],
+        "image": "",
+        "url": ""
+      }
+    ]
+  },
+  "skillset": {
+    "skillsList": {
+      "Lorem": "100",
+      "ipsum": "92",
+      "dolor": "61",
+      "amet": "53",
+      "mixtape": "25"
+    }
+  },
+  "contact": {
+    "content": ""
+  }
+}

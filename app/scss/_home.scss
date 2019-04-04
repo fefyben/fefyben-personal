@@ -1,0 +1,92 @@
+.home {
+  text-align: center;
+  min-height: 90vh;
+  height: 25rem;
+
+  &-container {
+    @include media-breakpoint-up(sm) {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      top: 50%;
+      width: 75%;
+    }
+
+    @include media-breakpoint-up(sm) {
+      width: 90%;
+    }
+  }
+
+  h1 {
+    font-size: 4rem;
+    font-weight: 200;
+    letter-spacing: -.15rem;
+    margin-bottom: 2rem;
+    animation: fadeInDown 2s both;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 6rem;
+    }
+  }
+  
+  h4 {
+    font-size: 1.5rem;
+    font-weight: 100;
+    animation: zoomInUp 3s both;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 2.25rem;
+    }
+  }
+  
+  h3 {
+    font-family: 'Old Standard TT', serif;
+    font-size: 1.5rem;
+    font-style: italic;
+    line-height: 2rem;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 2.25rem;
+      line-height: 3rem;
+    }
+  
+    small {
+      font-family: 'Raleway', sans-serif;
+      font-size: .75rem;
+      font-style: normal;
+      display: block;
+      text-align: center;
+
+      @include media-breakpoint-up(lg) {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  &-quote {
+    margin: 0 auto;
+    padding: 2.5rem 2rem 0;
+    position: relative;
+    display: inline-block;
+
+    &::before,
+    &::after {
+      display: inline-block;
+      font-family: 'Old Standard TT', serif;
+      font-size: 5rem;
+      opacity: .25;
+      position: absolute;
+      top: 15%;
+    }
+
+    &::before {
+      content: '“';
+      left: -.5rem;
+    }
+
+    &::after {
+      content: '”';
+      right: -.5rem;
+    }
+  }
+}
