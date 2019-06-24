@@ -1,5 +1,3 @@
 # fefyben-personal
 
-Hello world!
-
-Hello world again!
+This my personal page code example.
