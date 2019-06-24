@@ -251,7 +251,8 @@ section {
 .about p {
   font-weight: 300;
   font-size: 1.5rem;
-  line-height: 2rem; }
+  line-height: 2rem;
+  text-align: justify; }
   @media (min-width: 992px) {
     .about p {
       font-size: 2rem;
@@ -333,7 +334,7 @@ section {
     animation-name: progress-100; }
 
 .contact {
-  height: 80vh; }
+  min-height: 80vh; }
   @media (max-width: 991.98px) {
     .contact .col-lg:first-child {
       margin-bottom: 1.5rem;
@@ -366,9 +367,10 @@ section {
     .contact .btn:focus {
       color: #fff; }
   .contact .btn {
+    background-color: rgba(255, 255, 255, 0.5);
     text-transform: uppercase; }
     .contact .btn:hover {
-      background-color: rgba(255, 255, 255, 0.5);
+      background-color: rgba(255, 255, 255, 0.25);
       color: inherit; }
   .contact .invalid-feedback {
     color: #dc3545; }
